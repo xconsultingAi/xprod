@@ -1,0 +1,31 @@
+{
+  "name": "xprod-frontend",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit -p tsconfig.app.json && vite build --base=/assets/xprod/frontend/ && yarn copy-html-entry",
+    "copy-html-entry": "cp ../xprod/public/frontend/index.html ../xprod/www/xprod.html",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json"
+  },
+  "dependencies": {
+    "@ionic/vue": "^8.8.19",
+    "@ionic/vue-router": "^8.8.19",
+    "ionicons": "^7.4.0",
+    "pinia": "^2.3.1",
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/tsconfig": "^0.5.1",
+    "typescript": "~5.6",
+    "vite": "^6.4.5",
+    "vite-plugin-pwa": "^1.0.0",
+    "vue-tsc": "^2.2.12",
+    "workbox-build": "^7.4.1",
+    "workbox-window": "^7.4.1"
+  }
+}
